@@ -17,7 +17,7 @@ fit <- partitions$training %>%
 pred <- sdf_predict(fit, partitions$test) %>%
   collect
 
-# Revert this back ?
+# plot
 ggplot(pred, aes(x = mpg, y = prediction)) +
   geom_abline(lty = "dashed", col = "red") +
   geom_point() +
